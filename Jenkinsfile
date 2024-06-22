@@ -6,9 +6,14 @@ pipeline{
                 bat 'npm install'
             }
         }
-        stage("NPM Audit"){
+        stage("Run Audit"){
             steps{
                 bat 'npm audit'
+            }
+        }
+        stage("Run Integration Test"){
+            steps{
+                bat 'npm test'
             }
         }
     }
