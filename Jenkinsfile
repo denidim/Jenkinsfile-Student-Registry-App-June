@@ -16,5 +16,10 @@ pipeline{
                 bat 'npm test'
             }
         }
+        stage("Run Deploy"){
+            steps{
+                echo "Deploy"
+            }
+        }
     }
 }
